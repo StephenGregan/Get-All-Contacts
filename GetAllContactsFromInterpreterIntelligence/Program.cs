@@ -38,8 +38,8 @@ namespace GetAllContactsFromInterpreterIntelligence
             {
                 var values = new NameValueCollection
                 {
-                    { "j_username", "[username]" },
-                    { "j_password", "[password]" },
+                    { "j_username", "" },
+                    { "j_password", "" },
                 };
                 Console.WriteLine("Trying to validate username and password.....\n");
 
@@ -48,7 +48,7 @@ namespace GetAllContactsFromInterpreterIntelligence
                 Console.WriteLine("Successfully logged in to ii.....\n");
 
                 var recordCount = 10300;
-                var count = 1;
+                var count = 9;
 
                 for (var i = 0; i < recordCount; i++)
                 {
@@ -66,8 +66,8 @@ namespace GetAllContactsFromInterpreterIntelligence
                         Console.WriteLine("Root object : " + rootjson);
 
                         //File.WriteAllText(@"C:\json\test.json", JsonConvert.SerializeObject(rootjson));
-                        File.AppendAllText(@"", JsonConvert.SerializeObject(rootjson));
-                        File.AppendAllText(@"", Environment.NewLine);
+                        File.AppendAllText(@"C:\Users\Ronan\Json\test1.json", JsonConvert.SerializeObject(rootjson));
+                        File.AppendAllText(@"C:\Users\Ronan\Json\test1.json", Environment.NewLine);
 
                         Console.WriteLine("Contents successfully writing to file.....Record: " + count);
                     }
